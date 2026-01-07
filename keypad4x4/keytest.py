@@ -2,7 +2,7 @@ from machine import Pin, SoftI2C
 from time import sleep
 from pico_i2c_lcd import I2cLcd
 
-# ================= LCD =================
+#LCD
 I2C_ADDR = 0x27
 I2C_ROWS = 2
 I2C_COLS = 16
@@ -13,7 +13,7 @@ lcd = I2cLcd(i2c, I2C_ADDR, I2C_ROWS, I2C_COLS)
 lcd.clear()
 lcd.putstr("KEYPAD READY")
 
-# ================= KEYPAD =================
+#KEYPAD
 keys = [
     ['1','2','3','A'],
     ['4','5','6','B'],
@@ -40,7 +40,6 @@ def scan():
         rows[r].value(1)
     return None
 
-# ================= MAIN =================
 buffer = ""
 
 while True:
