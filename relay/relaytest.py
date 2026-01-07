@@ -1,9 +1,8 @@
 from machine import Pin
 from time import sleep
 
-#relay = Pin(15, Pin.OUT)
-
-print("Test Solenoid Start")
+# Connect to Solenoid for test if you need
+print("Test Start")
 
 relay = Pin(18, Pin.OUT, value=1)  # default OFF (LOW trigger) , value=1
 
